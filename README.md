@@ -24,3 +24,64 @@
 - `task SQL and Power query.xlsx` — исходные данные  
 - `task_Power Query.pbix` — обработка и трансформация данных в Power Query  
 - `powerbi_dashboard.pbix` — визуализация данных и расчёт метрик в Power BI  
+
+## 📂 Исходные данные
+
+**Таблица:** `transport_data`
+
+### Атрибуты таблицы `transport_data`
+
+- `DATERELEASE` — дата выполнения рейса  
+- `ROUTEID` — идентификатор маршрута  
+- `RUNPLAN` — плановый пробег  
+- `RUNFACT` — фактический пробег  
+
+---
+
+**Таблица:** `employees`
+
+### Атрибуты таблицы `employees`
+
+- `emplid` — табельный номер сотрудника  
+- `dep` — департамент  
+- `salary` — оклад  
+
+---
+
+## 📊 Задача 1. Агрегация данных по рейсам
+
+Позволяет проанализировать выполнение рейсов по маршрутам и датам: сравнить плановые и фактические показатели (количество рейсов и пробег)
+
+```sql
+SELECT
+   DATE(DATERELEASE) as DATERELEASE,
+   ROUTEID, 
+   COUNT(CASE WHEN RUNPLAN != 0 THEN 1 END) AS plan_trips_count,
+   COUNT(CASE WHEN RUNFACT != 0 THEN 1 END) AS fact_trips_count,
+   SUM(RUNPLAN) AS plan_distance,
+   SUM(RUNFACT) AS fact_distance
+FROM transport_data
+GROUP BY 1, 2
+ORDER BY 1, 2;
+
+![Результат](здесь будет рисунок)
+
+## 🧠 Задача 2. Поиск сотрудников с максимальным окладом в департаменте
+
+Требуется определить сотрудников, имеющих максимальный оклад внутри каждого департамента с использованием оконных функций
+
+```sql
+WITH ranked AS 
+(
+ SELECT
+  emplid,
+  dep,
+  salary,
+  RANK() OVER (PARTITION BY dep ORDER BY salary DESC) AS rnk
+ FROM employees
+)
+SELECT emplid
+FROM ranked
+WHERE rnk = 1;
+
+![Результат](здесь будет рисунок)
