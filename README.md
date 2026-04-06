@@ -63,7 +63,7 @@ SELECT
 FROM transport_data
 GROUP BY 1, 2
 ORDER BY 1, 2;
-
+```
 ![Результат](здесь будет рисунок)
 
 ## 🧠 Задача 2. Поиск сотрудников с максимальным окладом в департаменте
@@ -83,5 +83,5 @@ WITH ranked AS
 SELECT emplid
 FROM ranked
 WHERE rnk = 1;
-
+```
 ![Результат](здесь будет рисунок)
