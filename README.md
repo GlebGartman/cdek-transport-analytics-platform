@@ -161,23 +161,13 @@ WHERE rnk = 1;
 
 ---
 
-### 💳 Процент оплат
-![% оплат](https://drive.google.com/uc?export=view&id=1T2Hbf4sKFQqUYnn0ZkVNxNB-Zi3AW1XG)
-
----
-
-### ⚠️ Доля срывов рейсов
+### ⚠️ Процент срывов рейсов
 ![% срывов](https://drive.google.com/uc?export=view&id=15GeKC5r03tj3lczFJ27HyA3mmaFOmZvb)
 
 ---
 
-### 💰 Вознаграждение по типам оплаты
-![Типы ТК](https://drive.google.com/uc?export=view&id=1Ukz6dEAT9je-kCF5wpumY_AxqI0qzxLq)
-
----
-
-### 📊 Динамика вознаграждения перевозчика
-![Динамика](https://drive.google.com/uc?export=view&id=1IAMHxZ2VUxddDOOuTXMmfx1Xl6f37mdt)
+### 💳 Процент оплат
+![% оплат](https://drive.google.com/uc?export=view&id=1T2Hbf4sKFQqUYnn0ZkVNxNB-Zi3AW1XG)
 
 ---
 
@@ -201,10 +191,21 @@ WHERE rnk = 1;
 
 ---
 
-### 🏆 Топ-3 перевозчика по вознаграждению
-![Топ перевозчики](https://drive.google.com/uc?export=view&id=1QgqStZ6lKR7DIl5b6aRRt4heM9Pw5DD0)
+### ⚖️ Общая сумма штрафов
+![Штрафы](https://drive.google.com/uc?export=view&id=1nwGUI8olQZC3sqp03IZ8JRerd8FuVBY2)
 
 ---
 
-### ⚖️ Общая сумма штрафов
-![Штрафы](https://drive.google.com/uc?export=view&id=1nwGUI8olQZC3sqp03IZ8JRerd8FuVBY2)
+### 💰 Вознаграждение по типам ТК
+![Типы ТК](https://drive.google.com/uc?export=view&id=1Ukz6dEAT9je-kCF5wpumY_AxqI0qzxLq)
+
+---
+
+### 📊 Динамика вознаграждения перевозчика
+![Динамика](https://drive.google.com/uc?export=view&id=1IAMHxZ2VUxddDOOuTXMmfx1Xl6f37mdt)
+
+---
+
+### 🏆 Топ-3 перевозчика по вознаграждению
+![Топ перевозчики](https://drive.google.com/uc?export=view&id=1QgqStZ6lKR7DIl5b6aRRt4heM9Pw5DD0)
+
